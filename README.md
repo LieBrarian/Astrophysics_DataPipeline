@@ -25,25 +25,25 @@ _____________________________________________
 
 Function median_fit:
 1) Variables:
-    a) dataframe; dataframe:
-        i) datafraame object from pandas which is also imported in the function.
-    b) version=0; int:
-        -For version=0 y_data is a location i.e column name.
-        -For version=1 y_data is the data in the form of an array, dataframe, or similar object.
-    c) x_data="J.D.-2400000"; string:
-        -Location of the column to be used for the x data. Must be the same size as y_data.
-    d) y_data='rel_flux_SNR_T1; string,array,dataframe:
-            +Either the location of data in the dataframe object put as variable dataframe or the array/dataframe wanted.
-        --sig=3; integer:
-            +How many standard deviations points will need to be to not be included in output.
-        --save_graph; True, False:
-            +Whether or not the graph that can be created by this function is created and saved or not.
-        --name='test_graph'; string:
-            +If the graph is saved, this is the file name it will be saved under.
-        --type='.png'; string beggining with '.':
-            +The file type that the graph will be saved as using function matplotlib.pyplot.savefig().
-    return:
-        x: array of x values reduced to fit a median fit graph of y.
-        y: array of y values reduced to not intclude points outside sig standard deviasions.
-Use:
-    Uses moving median method to erase the data that is so far from the median at every point. The hope is that this will get rid of many if not all outliars to help improve accuracy. This is used throughout the rest of the library to complete computations. The aim of making the function was to have more control and maybe even speed up the library as a whole. Not only did it make it easier to write but it condencesed the code by a lot. The very first finished draft was around 300 lines with minimal comments. Before writing the help commands the code was under 100 lines and much faster with all new functions that didnt' exists in the original version.
+    1) dataframe; dataframe:
+        1) datafraame object from pandas which is also imported in the function.
+    2) version=0; int:
+        1) For version=0 y_data is a location i.e column name.
+        2) For version=1 y_data is the data in the form of an array, dataframe, or similar object.
+    3) x_data="J.D.-2400000"; string:
+        1) Location of the column to be used for the x data. Must be the same size as y_data.
+    4) y_data='rel_flux_SNR_T1; string,array,dataframe:
+        1) Either the location of data in the dataframe object put as variable dataframe or the array/dataframe wanted.
+    5) sig=3; integer:
+        1) How many standard deviations points will need to be to not be included in output.
+    6) save_graph; True, False:
+        1) Whether or not the graph that can be created by this function is created and saved or not.
+    7) name='test_graph'; string:
+        1) If the graph is saved, this is the file name it will be saved under.
+    8) type='.png'; string beggining with '.':
+        1) The file type that the graph will be saved as using function matplotlib.pyplot.savefig().
+2) return:
+    1) x: array of x values reduced to fit a median fit graph of y.
+    2) y: array of y values reduced to not intclude points outside sig standard deviasions.
+3) Use:
+    1) Uses moving median method to erase the data that is so far from the median at every point. The hope is that this will get rid of many if not all outliars to help improve accuracy. This is used throughout the rest of the library to complete computations. The aim of making the function was to have more control and maybe even speed up the library as a whole. Not only did it make it easier to write but it condencesed the code by a lot. The very first finished draft was around 300 lines with minimal comments. Before writing the help commands the code was under 100 lines and much faster with all new functions that didnt' exists in the original version.
